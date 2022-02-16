@@ -1,5 +1,5 @@
 # fbg5-klipper
-Guida fatta male e incompleta per klipper su Flyingbear Ghost 5
+Guida fatta _davvero_ male e incompleta per klipper su Flyingbear Ghost 5
 
 # In pratica
 
@@ -7,15 +7,21 @@ Uso DietPi invece di raspbian su un vecchio RPI3B
 
 In pratica:
 - Ho disabilitato i container docker di octoprint/mjpg-streamer già presenti sul raspberry 
-- Ho installato KIAU, Klipper, Moonraker e Fluidd https://klipper-italia.xyz/installazione-rpi/installazione-kiauh/
-- Una volta installato, ho compilato il firmware usando le impostazioni per la mia scheda madre (Nel mio caso STM32F103 quindi https://flyingbear.info/firmware/klipper/mcu_firmware#mks-robin-nano-v11 )
-- Ho criptato e rinominato il fw con "~/klipper/scripts/update_mks_robin.py ~/klipper/out/klipper.bin ~/klipper/out/Robin_nano35.bin" (pare necessario per Robin nano 1.1)
+- Ho scaricato KIAU per poi installare Klipper, Moonraker e Fluidd https://klipper-italia.xyz/installazione-rpi/installazione-kiauh/
+- Una volta installato tutto, ho compilato il firmware usando le impostazioni per la mia scheda madre (Nel mio caso STM32F103 quindi https://flyingbear.info/firmware/klipper/mcu_firmware#mks-robin-nano-v11 )
+- Ho criptato e rinominato il fw con 
+```
+~/klipper/scripts/update_mks_robin.py ~/klipper/out/klipper.bin ~/klipper/out/Robin_nano35.bin
+``` 
+(pare necessario per Robin nano 1.1)
+
 - Ho messo il fw ~/klipper/out/Robin_nano35.bin su microsd, ho riavviato la stampante ed ha flashato il nuovo firmware bloccandosi al 100%
 - Ho iniziato a creare la cfg della stampante con fluidd andando a http://IP-LOCALE-RASPBERRY
 - Ho seguito questa guida russa con google translate per creare la config stando attento alle posizioni dei pin per i miei driver XYZE (Avendo TMC2208 su X / Y e A4988 su Z / E ) https://flyingbear.info/ru/firmware/klipper
-- Nel mio caso ho avuto problemi ad accedere a /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0 anche se esisteva, (forse problema di DietPi) ma non ho avuto problemi impostando /dev/ttyUSB0
+- Ho riavviato la stampante, dopo il beep, schermo nero quindi tutto perfetto
+- Nel mio caso ho avuto problemi ad accedere a /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0 anche se esisteva, (forse problema di DietPi/permessi) ma non ho avuto problemi impostando /dev/ttyUSB0
 - Ho graffiato il piatto magnetico 20€, quindi FARE CALIBRAZIONE VITI PER PRIMA COSA
-- Ho fatto stampa di prova e nonostante mi sia sembrato che andasse a 200 km/h sembrava tutto ok, 
+- Ho fatto stampa di prova e nonostante mi sia sembrato che andasse a 200 km/h sembrava tutto ok
 
 
 # Printer.cfg
@@ -23,7 +29,8 @@ In pratica:
 
 
 QUI SOTTO ALLEGO LA MIA printer.cfg
-N.B. Ho driver TMC2208 su X / Y e A4988 su Z / E e scheda madre STM32F103 
+
+*N.B. Ho driver TMC2208 su X / Y e A4988 su Z / E e scheda madre STM32F103*
 
 
 ```
