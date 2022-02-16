@@ -24,8 +24,6 @@ In pratica:
 - Ho graffiato il piatto magnetico 20€, quindi FARE CALIBRAZIONE VITI PER PRIMA COSA 🐷😇,😇🐷!
 - Ho fatto stampa di prova e nonostante mi sia sembrato che andasse a 200 km/h sembrava tutto ok
 
-![image](https://user-images.githubusercontent.com/12370126/154228285-e5f54d5d-913e-4d7f-8536-2bb8a0b2fa33.png)
-
 # Printer.cfg
 [QUI ALLEGO IL FIRMWARE PRECOMPILATO](https://github.com/cherokee93/fbg5-klipper/raw/main/Robin_nano35.bin) da mettere su microsd nel caso tu abbia una STM32F103
 
