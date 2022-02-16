@@ -1,9 +1,10 @@
-# fbg5-klipper
-Guida fatta _davvero_ male e incompleta per klipper su Flyingbear Ghost 5
+# Klipper+ Fluidd su Flyingbear Ghost 5 + RPI3B
+Guida fatta _davvero_ male e incompleta per klipper+ fluidd su Flyingbear Ghost 5
+![image](https://user-images.githubusercontent.com/12370126/154228285-e5f54d5d-913e-4d7f-8536-2bb8a0b2fa33.png)
 
 # In pratica
 
-Uso DietPi invece di raspbian su un vecchio RPI3B
+Personalmente uso DietPi invece di Raspbian su un vecchio RPI3B
 
 In pratica:
 - Ho disabilitato i container docker di octoprint/mjpg-streamer già presenti sul raspberry 
@@ -20,9 +21,10 @@ In pratica:
 - Ho seguito questa guida russa con google translate per creare la config stando attento alle posizioni dei pin per i miei driver XYZE (Avendo TMC2208 su X / Y e A4988 su Z / E ) https://flyingbear.info/ru/firmware/klipper
 - Ho riavviato la stampante, dopo il beep, schermo nero quindi tutto perfetto
 - Nel mio caso ho avuto problemi ad accedere a /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0 anche se esisteva, (forse problema di DietPi/permessi) ma non ho avuto problemi impostando /dev/ttyUSB0
-- Ho graffiato il piatto magnetico 20€, quindi FARE CALIBRAZIONE VITI PER PRIMA COSA
+- Ho graffiato il piatto magnetico 20€, quindi FARE CALIBRAZIONE VITI PER PRIMA COSA 🐷😇,😇🐷!
 - Ho fatto stampa di prova e nonostante mi sia sembrato che andasse a 200 km/h sembrava tutto ok
 
+![image](https://user-images.githubusercontent.com/12370126/154228285-e5f54d5d-913e-4d7f-8536-2bb8a0b2fa33.png)
 
 # Printer.cfg
 [QUI ALLEGO IL FIRMWARE PRECOMPILATO](https://github.com/cherokee93/fbg5-klipper/raw/main/Robin_nano35.bin) da mettere su microsd nel caso tu abbia una STM32F103
